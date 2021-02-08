@@ -36,17 +36,25 @@ export default function App() {
   };
 
   return (
-    <div>
-      Hello World!
-      <div>
+    <div className="text-center my-4">
+      <h1 className="text-dark">Get your weather!</h1>
+      <div className="mt-4">
         <form>
           <label>
-            Location:
-            <input type="text" onChange={handleChange}></input>
-            <button onClick={handleSubmit}>Submit</button>
+            <h3 className="text-dark">Tell me the city: </h3>
+            <input
+              type="text"
+              onChange={handleChange}
+              className="form-control mb-2"
+            ></input>
+            <button onClick={handleSubmit} className="btn btn-primary mb-4">
+              Submit
+            </button>
           </label>
         </form>
-        <div>The weather in {location} is:</div>
+        <div>
+          <h4 className="text-dark">The weather in your location is :</h4>
+        </div>
       </div>
     </div>
   );
